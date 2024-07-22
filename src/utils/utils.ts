@@ -186,18 +186,31 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
     ? ARTICLE_DETAILS?.preview.author.name
     : PAGE_SEO?.author;
 
+  // const title =
+  //   router.asPath === "/"
+  //     ? `${
+  //         ARTICLE_DETAILS
+  //           ? ARTICLE_DETAILS?.preview?.articleTitle
+  //           : PAGE_SEO?.title
+  //       } ${author ? "| " + author : null}`
+  //     : `${
+  //         ARTICLE_DETAILS
+  //           ? ARTICLE_DETAILS?.preview?.articleTitle
+  //           : PAGE_SEO?.title
+  //       } | ${WEBSITE_NAME} ${author ? "| " + author : null}`;
+
   const title =
     router.asPath === "/"
       ? `${
           ARTICLE_DETAILS
             ? ARTICLE_DETAILS?.preview?.articleTitle
             : PAGE_SEO?.title
-        } ${author ? "| " + author : null}`
+        }`
       : `${
           ARTICLE_DETAILS
             ? ARTICLE_DETAILS?.preview?.articleTitle
             : PAGE_SEO?.title
-        } | ${WEBSITE_NAME} ${author ? "| " + author : null}`;
+        }`;
 
   let seo_config = {
     title: title,
@@ -222,16 +235,16 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
         {
           url: ogImage,
           width: 1200,
-          height: 630,
+          height: 1200,
           alt: title,
         },
       ],
     },
-    twitter: {
-      handle: twitterHandle,
-      site: ogUrl,
-      cardType: "summary_large_image",
-    },
+    // twitter: {
+    //   handle: twitterHandle,
+    //   site: ogUrl,
+    //   cardType: "summary_large_image",
+    // },
   };
   return seo_config;
 };

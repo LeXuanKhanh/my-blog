@@ -23,6 +23,23 @@ import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiFillInstagram, AiFill
 }
  */
 
+export const MINE: IAuthor = {
+    name: "Khanh Le Xuan",
+    designation: "Software Engineer",
+    bio: "Just an average software engineeer",
+    profilePic: "",
+     social: [
+        {
+            icon: <AiFillGithub />,
+            link: 'https://github.com/LeXuanKhanh'
+        },
+        {
+            icon: <AiFillLinkedin />,
+            link: 'https://www.linkedin.com/in/khanh-le-xuan-a8b445151/'
+        },
+    ]
+}
+
 export const MAYUR: IAuthor = {
     name: "Mayur Nalwala",
     designation: "Software Engineer",
@@ -59,7 +76,7 @@ export const RUPALI: IAuthor = {
 
 
 // This can your company name / your name etc for SEO purposes
-export const WEBSITE_NAME: string = 'Next Js Blog Template';
+export const WEBSITE_NAME: string = 'SUPERATOM';
 export const WEBSITE_URL: string = 'https://nextjs-simple-blog-template.web.app/';
 
 /**
@@ -77,7 +94,7 @@ export const PRIMARY_NAV: iNavSetup = {
     // },
     logo: {
         type: LogoType.TEXT,
-        logo: 'Next Blog',
+        logo: 'SUPERATOM',
     },
     // navLinks are the main navbar links that apper on top of every page
     navLinks: [
@@ -92,22 +109,22 @@ export const PRIMARY_NAV: iNavSetup = {
             path: ''
         },
         {
-            label: 'About Us',
+            label: 'About Me',
             path: '/about-us'
         },
+        // {
+        //     // to open a link in new tab pass newTab: true
+        //     label: 'Support Us',
+        //     path: 'https://www.buymeacoffee.com/webexpe13z',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Github Repo',
+        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
+        //     newTab: true
+        // },
         {
-            // to open a link in new tab pass newTab: true
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
-        },
-        {
-            label: 'Contact Us',
+            label: 'Contact Me',
             path: '/contact-us'
         }
     ],
@@ -138,24 +155,11 @@ export const PRIMARY_NAV: iNavSetup = {
             newTab: true
         },
         {
-            label: 'Contact Us',
+            label: 'Contact Me',
             path: '/contact-us'
         }
     ],
-    socials: [
-        {
-            link: 'https://www.facebook.com/',
-            icon: <AiFillFacebook />
-        },
-        {
-            link: 'https://www.instagram.com/',
-            icon: <AiFillInstagram />
-        },
-        {
-            link: 'https://twitter.com/WebExpe',
-            icon: <AiOutlineTwitter />
-        },
-    ]
+    socials: MINE.social ?? [],
 }
 
 export const DEFAULT_SEO: iSEO = {
@@ -163,7 +167,7 @@ export const DEFAULT_SEO: iSEO = {
     description: "A simple blog template using NextJS and Typescript.",
     keywords: "Blog, next js, template, next js blog, blog setup, typescript, nextjs typescript, react js blog template, responsive blog template",
     url: WEBSITE_URL,
-    author: `${MAYUR.name}, ${RUPALI.name}`,
-    twitterHandle: '@WebExpe',
-    ogImage: '/public/images/og-image.jpg'
+    author: `${MINE.name}`,
+    // twitterHandle: '@WebExpe',
+    ogImage: '/public/images/main-icon.jpg'
 }
