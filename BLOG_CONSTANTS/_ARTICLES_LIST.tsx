@@ -1,7 +1,7 @@
 import { iArticle } from "../src/shared/interfaces";
 
 // Import author profiles, just type the name you have set in _BLOG_SETUP inside the curly brackets
-import { MAYUR, RUPALI } from "./_BLOG_SETUP";
+import { MAYUR, MINE, RUPALI } from "./_BLOG_SETUP";
 
 // main article list to display all atricles
 /**
@@ -210,6 +210,24 @@ const ARTICLES_LIST: iArticle[] = [
     seo: {
       keywords:
         "demo, all components, style guide, styling, css, tailwind css, tailwind, webexpe, webexpe.com, styling tutorial, icons, how to use icons in website",
+      ogImage: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
+    },
+  },
+  {
+    path: "/pages/blog/why-i-start-to-write-blog.tsx",
+    preview: {
+      author: MINE,
+      date: "July 23 2024",
+      articleTitle: "Vì sao mình bắt đầu viết blog",
+      shortIntro:
+        "Thật ra tiêu đề chính xác hơn là: tại sao đến giờ mình mới viết blog",
+      tags: "",
+      thumbnail: "/public/images/main-icon.jpg",
+      category: "Personal thought",
+    },
+    seo: {
+      keywords:
+        "",
       ogImage: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
     },
   },

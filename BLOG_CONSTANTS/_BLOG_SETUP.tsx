@@ -27,7 +27,7 @@ export const MINE: IAuthor = {
     name: "Khanh Le Xuan",
     designation: "Software Engineer",
     bio: "Just an average software engineeer",
-    profilePic: "",
+    profilePic: "/images/main-icon.jpg",
      social: [
         {
             icon: <AiFillGithub />,
@@ -123,10 +123,10 @@ export const PRIMARY_NAV: iNavSetup = {
         //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
         //     newTab: true
         // },
-        {
-            label: 'Contact Me',
-            path: '/contact-us'
-        }
+        // {
+        //     label: 'Contact Me',
+        //     path: '/contact-us'
+        // }
     ],
     // sideNavLinks are the links which appear when you open the side menu after clicking the burger menu icon.
     sideNavLinks: [
@@ -140,24 +140,24 @@ export const PRIMARY_NAV: iNavSetup = {
             type: 'dropdown',
             path: ''
         },
-        {
-            label: 'About Us',
-            path: '/about-us'
-        },
-        {
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
-        },
-        {
-            label: 'Contact Me',
-            path: '/contact-us'
-        }
+        // {
+        //     label: 'About Us',
+        //     path: '/about-us'
+        // },
+        // {
+        //     label: 'Support Us',
+        //     path: 'https://www.buymeacoffee.com/webexpe13z',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Github Repo',
+        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Contact Me',
+        //     path: '/contact-us'
+        // }
     ],
     socials: MINE.social ?? [],
 }
